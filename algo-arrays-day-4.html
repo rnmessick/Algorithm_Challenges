@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Algo Arrays Day 4</title>
+	<script type="text/javascript">
+		"use strict"
+// Remove negatives
+function removeNegatives(arr) {
+	for (var i =0; i <= arr.length-1; i++) {
+		if (arr[i] < 0) {
+			arr.splice(i,1);
+			i--;
+
+		}
+			console.log(arr);
+	}
+}
+
+// Second-to-last
+function secondToLast(arr) {
+	for (var i = 0; i < arr.length-1; i++) {
+		if (arr.length > arr.length-1) {
+		console.log(arr[arr.length-2]);
+	}
+		else {
+			console.log("null");
+		}
+
+	}
+}
+
+// Nth-to-last
+function nthToLast(arr, n) {
+	for (var i = 0; i < arr.length-1; i++) {
+		if (arr.length > arr.length - 1) {
+			console.log(arr[arr.length -n]);
+		}
+		else {
+			console.log("null")
+		}
+	}
+}
+
+// Second largest
+</script>
+</head>
+<body>
+
+</body>
+</html>
