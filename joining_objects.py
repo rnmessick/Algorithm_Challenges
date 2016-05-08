@@ -95,6 +95,7 @@ def innerJoin(user_list, book_list, usersbook_list):
         temp.append(book_list[booksIdx])
     joinedArray.append(temp)
     temp = []
+    return joinedArray
 joinedArray = innerJoin(users, books, usersHaveBooks)
 print joinedArray
 
