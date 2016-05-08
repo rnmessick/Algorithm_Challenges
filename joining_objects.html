@@ -5,12 +5,6 @@
 	<script type="text/javascript">
 		"use strict"
 
-// 1. write a function that uses the three arrays to create a new array.
-// 2. each element must be an array with three objects.
-// 3. users objects id must match user_id of usersHaveBooks.
-// books object id must match the book_id of usersHaveBooks
-
-
 
 var users = [
   {
@@ -92,9 +86,15 @@ var books = [
   },
 ]
 
+// 1. write a function that uses the three arrays to create a new array.
+// 2. each element must be an array with three objects.
+// 3. users objects id must match user_id of usersHaveBooks.
+// books object id must match the book_id of usersHaveBooks
 
 
-function innerJoin(users, books, usersHaveBooks){
+
+
+function innerJoin(users, books, usersHaveBooks) {
 
   var joinedArray = [];
   var temp = [];
@@ -106,13 +106,13 @@ for (var ubn = 0; ubn < usersHaveBooks.length; ubn++){
 	// sweep across users,books
 	for(var usweep=0; usweep<users.length; usweep++){
 		// technically, this could be faster
-		// we're just learning, and length = 3, so IDGAF
-		if( users[usweep]["user_id"] == u ){
+		// we're just learning, and length = 3
+		if( users[usweep]["id"] == u ){
 			temp.push(users[usweep]);
 		}
 	}
 	for(var bsweep=0; bsweep<books.length; bsweep++){
-		if( books[bsweep]["book_id"] == b ){
+		if( books[bsweep]["id"] == b ){
 			temp.push(books[bsweep]);
 		}
 	}
@@ -122,6 +122,16 @@ for (var ubn = 0; ubn < usersHaveBooks.length; ubn++){
 console.log(joinedArray);
 }
 
+
+// function leftJoin( arr, arr2, arr3, idx,idx2,idx3 ){
+// 	var newArray = [];
+// 	var temp = [];
+// 	for (var i =0; i < arr.length; i++) {
+// 		temp.push(arr);
+
+		
+// 	}
+// }
 
 	</script>
 </head>
